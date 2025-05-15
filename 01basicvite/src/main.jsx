@@ -1,7 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import First from "./first.jsx";
+import Count from "./counter.jsx";
+
 
 const reactElement = React.createElement(
   "img",
@@ -13,10 +14,15 @@ const reactElement = React.createElement(
   },
   null
 );
+
 createRoot(document.getElementById("root")).render(
   <>
     {reactElement}
     <App />
-    <First />
+    <Count />
   </>
+
+
+
+
 );

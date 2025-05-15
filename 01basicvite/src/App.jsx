@@ -1,10 +1,8 @@
-import First from "./first";
 
 function App() {
   return (
     <>
-      <First />
-      <h1>Hello Vite + React!</h1>
+      <h1>Hello from app.jsx</h1>
     </>
   );
 }
