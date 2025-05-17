@@ -21,7 +21,7 @@ function App() {
       char += '0123456789'
     }
     if (characters) {
-      char += '!@#$%^&*()_+[]{}|;:,.<>?'
+      char += '!@#$%^&*'
     }
     let password = ''
     for (let i = 0; i < length; i++) {
