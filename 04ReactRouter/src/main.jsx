@@ -1,14 +1,15 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { RouterProvider } from "react-router-dom";
+import { Navigate, RouterProvider } from "react-router-dom";
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import Github from "./components/Github/Github.jsx";
 import User from "./components/User/User.jsx";
-
+import Login from "./components/Login/Login.jsx";
+import { githubInfoLoader } from "./components/Github/Github.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,15 +29,19 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        // Loader: githubInfoLoader,
         path: "github",
         element: <Github />,
+        loader: githubInfoLoader,
       },
       {
         path: "user/:userId",
         element: <User />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login/>,
   },
 ]);
 
